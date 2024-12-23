@@ -27,21 +27,50 @@ header h2 {
   font-weight: lighter;
   margin-top: 15px;
 }
-.grid {
+
+.grid-3-col-first-short {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   grid-gap: 20px;
 }
-
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+main h2 {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.5;
+}
+main h3 {
+  font-size: 30px;
+  margin: 0;
+  line-height: 1.5;
+}
+main p {
+  letter-spacing: 1px;
+}
+section {
+  padding: 50px;
+}
+.img-responsive {
+  max-width: 100%;
+  margin: 0 auto;
+}
 footer {
   color: white;
   padding: 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+  background-image: linear-gradient(
+      rgba(16, 65, 74, 0.8),
+      rgba(14, 55, 67, 0.8)
+    ),
     url("../images/lakecomohouses.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 50px;
 }
 footer a {
   color: white;
@@ -60,5 +89,17 @@ footer a {
   }
   header h3 {
     font-size: 13px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  main h2 {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .img-responsive {
+    max-width: 410px;
   }
 }
