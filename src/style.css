@@ -1,7 +1,12 @@
+:root {
+  --shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
 body {
   font-family: "Montserrat", serif;
   background-color: rgb(116, 130, 134, 0.4);
 }
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -27,7 +32,10 @@ header h2 {
   font-weight: lighter;
   margin-top: 15px;
 }
-
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .grid-3-col-first-short {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
@@ -38,6 +46,38 @@ header h2 {
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
 }
+.hikes-link {
+  text-decoration: none;
+  color: white;
+  background-color: #153e3c;
+  padding: 10px 100px;
+  margin: 15px;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #153e3c;
+}
+.hikes-link:hover {
+  color: #153e3c;
+  background-color: white;
+  transition: 100ms ease-in-out;
+}
+.card {
+  background-color: white;
+  box-shadow: var(--shadow);
+
+  margin: 40px 20px;
+}
+.card img {
+  max-width: 50%;
+  display: flex;
+}
+.card-body {
+  padding: 15px;
+}
+
 main h2 {
   font-size: 12px;
   font-weight: normal;
@@ -55,10 +95,18 @@ main p {
 }
 section {
   padding: 50px;
+  max-width: 100%;
 }
 .img-responsive {
   max-width: 100%;
   margin: 0 auto;
+}
+.primary-section {
+  background-color: white;
+}
+.secondary-section {
+  background-color: rgba(86, 107, 113, 0.4);
+  text-align: center;
 }
 footer {
   color: white;
