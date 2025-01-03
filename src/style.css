@@ -11,6 +11,9 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+.text-center {
+  text-align: center;
+}
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../images/lakecomo1.jpg");
@@ -35,6 +38,7 @@ header h2 {
 .grid-3-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
 }
 .grid-3-col-first-short {
   display: grid;
@@ -45,6 +49,14 @@ header h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+}
+.grid-2-col-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.embed {
+  width: 100%;
+  aspect-ratio: 1/ 1;
 }
 .hikes-link {
   text-decoration: none;
@@ -67,17 +79,17 @@ header h2 {
 .card {
   background-color: white;
   box-shadow: var(--shadow);
-
-  margin: 40px 20px;
+  margin: 30px 0;
 }
 .card img {
-  max-width: 50%;
-  display: flex;
+  width: 100%;
 }
 .card-body {
   padding: 15px;
 }
-
+.card-footer {
+  padding: 0px 30px 30px;
+}
 main h2 {
   font-size: 12px;
   font-weight: normal;
@@ -94,8 +106,9 @@ main p {
   letter-spacing: 1px;
 }
 section {
-  padding: 50px;
+  padding: 100px;
   max-width: 100%;
+  margin: 0 auto;
 }
 .img-responsive {
   max-width: 100%;
@@ -124,7 +137,7 @@ footer a {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   header {
     padding: 30px 10px;
   }
@@ -146,7 +159,7 @@ footer a {
     margin-top: 20px;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .img-responsive {
     max-width: 410px;
   }
