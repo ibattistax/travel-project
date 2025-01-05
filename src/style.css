@@ -26,7 +26,7 @@ header {
   margin: 0 auto;
 }
 header h1 {
-  font-size: 60px;
+  font-size: 80px;
   letter-spacing: 3px;
   margin: 10px;
 }
@@ -34,6 +34,10 @@ header h1 {
 header h2 {
   font-weight: lighter;
   margin-top: 15px;
+  font-size: 35px;
+}
+header h3 {
+  font-size: 24px;
 }
 .grid-3-columns {
   display: grid;
@@ -57,25 +61,49 @@ header h2 {
 .embed {
   width: 100%;
   aspect-ratio: 1/ 1;
+  margin: 0 auto;
 }
-.hikes-link {
+.primary-button {
+  text-decoration: none;
+  color: #153e3c;
+  background-color: white;
+  padding: 10px 50px;
+  margin: 50px;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid white;
+  text-transform: uppercase;
+}
+.secondary-button {
   text-decoration: none;
   color: white;
   background-color: #153e3c;
-  padding: 10px 100px;
-  margin: 15px;
+  padding: 10px;
+  width: 90%;
+  margin: 20px 0 auto;
   display: inline-block;
   box-shadow: var(--shadow);
   letter-spacing: 1px;
   font-size: 13px;
   font-weight: 600;
   border: 1px solid #153e3c;
+  text-transform: uppercase;
 }
-.hikes-link:hover {
+.primary-button:hover {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: 100ms ease-in-out;
+}
+.secondary-button:hover {
   color: #153e3c;
   background-color: white;
   transition: 100ms ease-in-out;
 }
+
 .card {
   background-color: white;
   box-shadow: var(--shadow);
@@ -88,7 +116,7 @@ header h2 {
   padding: 15px;
 }
 .card-footer {
-  padding: 0px 30px 30px;
+  padding: 10px;
 }
 main h2 {
   font-size: 12px;
@@ -102,11 +130,17 @@ main h3 {
   margin: 0;
   line-height: 1.5;
 }
+main h4 {
+  font-size: 20px;
+}
+main h5 {
+  font-size: 15px;
+}
 main p {
   letter-spacing: 1px;
 }
 section {
-  padding: 100px;
+  padding: 50px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -121,6 +155,10 @@ section {
   background-color: rgba(86, 107, 113, 0.4);
   text-align: center;
 }
+.instagram-grid {
+  margin-top: 20px;
+}
+
 footer {
   color: white;
   padding: 20px;
@@ -158,9 +196,31 @@ footer a {
   main h2 {
     margin-top: 20px;
   }
+  .embed {
+    aspect-ratio: 16 / 9;
+  }
+  .card img {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 10px;
+  }
+  .instagram-grid {
+    display: block;
+  }
+  .instagram-block {
+    margin: 20px 0px;
+  }
 }
 @media (min-width: 960px) {
   .img-responsive {
     max-width: 410px;
+  }
+}
+@media (max-width: 1140px) {
+  .instagram-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
